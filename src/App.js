@@ -4,11 +4,11 @@ import Categories from "./categories";
 import ProductsList from "./products";
 
 function App() {
-  const [category, setCategory] = useState["All"];
+  const [category, setCategory] = useState("All");
   return (
     <div className="App">
-      <Categories />
-      <ProductsList />
+      <Categories setCategory={setCategory} category={category} />
+      <ProductsList category={category} />
     </div>
   );
 }

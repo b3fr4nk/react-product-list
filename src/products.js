@@ -1,23 +1,30 @@
 import data from "./data";
 import "./productList.css";
 
-function Products() {
-  const component = data.map((product) => {
-    return (
-      <div>
-        <h2>{product.name}</h2>
-        <h3>{product.price}</h3>
-        <p>{product.category}</p>
-      </div>
-    );
-  });
+function Products(props) {
+  const { category } = props;
+  // console.log(category);
+  const component = data
+    .filter((item) => {
+      return item.category === category || category === "All";
+    })
+    .map((product) => {
+      return (
+        <div>
+          <h2>{product.name}</h2>
+          <h3>{product.price}</h3>
+          <p>{product.category}</p>
+        </div>
+      );
+    });
   return component;
 }
 
-function ProductsList() {
+function ProductsList(props) {
+  const { category } = props;
   return (
     <div className="productsList">
-      <Products />
+      <Products category={category} />
     </div>
   );
 }

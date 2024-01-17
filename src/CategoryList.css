@@ -1,0 +1,8 @@
+.CategoryList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.selected {
+  background-color: darkblue;
+}
