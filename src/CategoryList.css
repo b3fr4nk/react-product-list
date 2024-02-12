@@ -6,3 +6,19 @@
 .selected {
   background-color: darkblue;
 }
+
+.category-button {
+  display: inline;
+  margin: 5px;
+}
+
+button {
+  padding: 10px;
+}
+
+.badge {
+  background-color: orange;
+  border-radius: 15px;
+  margin-left: -10px;
+  margin-bottom: 10px;
+}
